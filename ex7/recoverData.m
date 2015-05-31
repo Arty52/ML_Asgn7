@@ -21,7 +21,14 @@ X_rec = zeros(size(Z, 1), size(U, 1));
 %               Notice that U(j, 1:K) is a row vector.
 %               
 
+% Similar algorithm to projectData.m
+U_reduce = U(:, 1:K);
 
+for i = 1:size(Z,1)
+
+    X_rec(i,:) = Z(i,:) * U_reduce';
+    
+end
 
 % =============================================================
 

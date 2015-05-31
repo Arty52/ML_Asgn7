@@ -26,7 +26,7 @@ for i = 1:size(X,1)
     
     for k = 1:K
         diff = X(i, :) - centroids(k,:);    %diff between x and centroid
-        d = diff * diff';                     %squared
+        d = diff * diff';                   %squared
         
         %compare to current minimum, update if true
         if (d < minimum)
